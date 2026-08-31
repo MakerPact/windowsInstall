@@ -9,24 +9,24 @@ Video 1.
 *********THIS WILL CREATE A LIST OF YOUR APPS**************
 Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Format-Table –AutoSize > C:\Users\Lori\Documents\InstalledPrograms-PS.txt
 
-********THIS WILL GET YOUR SERVICES MENUE UP.**************
+********THIS WILL GET YOUR SERVICES MENU UP.**************
 services.msc
 
-********Look for and make sure thease asre running and is set to AUTOMATIC.*************
-Background intelligent Transfer Services
+********Look for and make sure these are running and are set to AUTOMATIC.*************
+Background Intelligent Transfer Services
 IKE and AuthIP Ipsec Keying Modules
 Server
 Windows Update
 Workstation
 
-*********THIS WILL PULL UP THE REGESTRY EDITOR.***************
+*********THIS WILL PULL UP THE REGISTRY EDITOR.***************
 regedit
 
-*********THIS IS THE SNIPiTS USED TO GET YOUR WINDOWS KEY.*****
-TRY THEASE ONE AT A TIME AND ONE OF THEM SHOULD GET YOU YOUR WINDOWS KEY.
+*********THESE ARE THE SNIPPETS USED TO GET YOUR WINDOWS KEY.*****
+TRY THESE ONE AT A TIME AND ONE OF THEM SHOULD GET YOU YOUR WINDOWS KEY.
 
 wmic path softwarelicensingservice get OA3xOriginalProductKey
-powershell "(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
+powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
 wmic os get "SerialNumber"
 
 
